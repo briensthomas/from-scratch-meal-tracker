@@ -15,12 +15,19 @@ form {
     width: 500px;
     padding: 10%;
     border: 2px solid black;
-    margin: 30px;
+    margin: 30px 15px 30px 15px;
 }
-/* 
+
 .save-meal {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: 0;
     padding: 0;
-} */
+    border: 2px solid black;
+    width: 500px;
+}
+
+.meals-list {
+    border: 2px solid black;
+    width: 500px;
+}

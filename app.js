@@ -10,6 +10,7 @@ const mealsList = document.getElementById('meal-list');
 // let state
 let ingredientsArray = [];
 let mealsArray = [];
+
 // set event listeners 
   // get user input
   // use user input to update state 
@@ -46,12 +47,12 @@ removeIngredientButton.addEventListener('click', () => {
 mealSubmitButton.addEventListener('click', () => {
     const name = mealInput.value;
     let totalIngredients = ingredientsArray.length;
-    
     mealsArray.push({
         name,
         totalIngredients,
     });
     displayMealsList();
+    resetIngredientsList();
 });
 
 const displayMealsList = () => {
@@ -60,4 +61,8 @@ const displayMealsList = () => {
         const li = renderMealsList(meal);
         mealsList.append(li);
     }
+};
+
+const resetIngredientsList = () => {
+    ingredientsList.textContent = '';
 };
