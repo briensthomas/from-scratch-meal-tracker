@@ -1,18 +1,17 @@
 // import functions and grab DOM elements
+import { renderIngredientsList } from './utils.js';
 const ingredientForm = document.getElementById('add-ingredient');
-const ingredientName = document.getElementById('ingredient-name');
-const ingredientQuantity = document.getElementById('ingredient-quantity');
-const ingredientMeasurement = document.getElementById('ingredient-measurement');
-const ingredientSubmit = document.getElementById('ingredient-submit');
+// const ingredientSubmit = document.getElementById('ingredient-submit');
 
+const ingredientsList = document.getElementById('ingredients-list');
 // let state
-let ingredientList = [];
+let ingredientsArray = [];
 // set event listeners 
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
 
-ingredientSubmit.addEventListener('click', (e) => {
+ingredientForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const ingredientData = new FormData(ingredientForm);
 
@@ -21,5 +20,15 @@ ingredientSubmit.addEventListener('click', (e) => {
         quantity: ingredientData.get('ingredient-quantity'),
         measurement: ingredientData.get('ingredient-measurement'),
     };
-    console.log('logging ingredients', ingredients);
+    ingredientsArray.push(ingredients);
+    console.log('logging ingredients', ingredientsArray);
+    displayIngredientsList();
 });
+
+const displayIngredientsList = () => {
+    ingredientsList.textContent = '';
+    for (let item of ingredientsArray) {
+        const li = renderIngredientsList(item);
+        ingredientsList.append(li);
+    }
+};

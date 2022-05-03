@@ -20,32 +20,40 @@
     </header>
     <main>
         <section class="main-section">
-            <img class="main-logo" src="./assets/alchemy-logo.png" />
             <h2>
-              Ingredients
+                Ingredients
             </h2>
-            <form id="add-ingredient">
-                <label>
-                    Add Ingredient
-                    <input type="text" id="ingredient-name" name="ingredient-name" />
-                </label>
-                <label>
-                    Quantity
-                    <input type="text" id="ingredient-quantity" name="ingredient-quantity" />
-                </label>
-                <label>
-                    <select id="ingredient-measurement" name="ingredient-measurement">
-                        <option value="cups">Cups</option>
-                        <option value="tablespoons">Tablespoon(s)</option>
-                        <option value="teaspoons">Teaspoon(s)</option>
-                        <option value="grams">Grams</option>
-                        <option value="milliliters">Milliliters</option>
-                    </select>
-                </label>
-                <button type="submit" id="ingredient-submit">Add Ingredient</button>
-            </form>
-        
+            <section class="row">
+                <form id="add-ingredient">
+                    <label>
+                        Add Ingredient
+                        <input type="text" id="ingredient-name" name="ingredient-name" />
+                    </label>
+                    <label>
+                        Quantity
+                        <input type="text" id="ingredient-quantity" name="ingredient-quantity" />
+                    </label>
+                    <label>
+                        Measurement
+                        <select id="ingredient-measurement" name="ingredient-measurement">
+                            <option value="cups">Cups</option>
+                            <option value="tablespoons">Tablespoon(s)</option>
+                            <option value="teaspoons">Teaspoon(s)</option>
+                            <option value="grams">Grams</option>
+                            <option value="milliliters">Milliliters</option>
+                        </select>
+                    </label>
+                    <button type="submit" id="ingredient-submit">Add Ingredient</button>
+                </form>
+            </section>
+            <section class="row">
+                <div>
+                    <ul id="ingredients-list">
+                        
+                    </ul>
+                </div>
 
+            </section>
         </section>
     </main>
     <footer>
