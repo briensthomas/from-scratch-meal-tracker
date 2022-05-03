@@ -24,35 +24,38 @@
                 Ingredients
             </h2>
             <section class="row">
-                <form id="add-ingredient">
-                    <label>
-                        Add Ingredient
-                        <input type="text" id="ingredient-name" name="ingredient-name" />
-                    </label>
-                    <label>
-                        Quantity
-                        <input type="text" id="ingredient-quantity" name="ingredient-quantity" />
-                    </label>
-                    <label>
-                        Measurement
-                        <select id="ingredient-measurement" name="ingredient-measurement">
-                            <option value="cups">Cups</option>
-                            <option value="tablespoons">Tablespoon(s)</option>
-                            <option value="teaspoons">Teaspoon(s)</option>
-                            <option value="grams">Grams</option>
-                            <option value="milliliters">Milliliters</option>
-                        </select>
-                    </label>
-                    <button type="submit" id="ingredient-submit">Add Ingredient</button>
-                </form>
-            </section>
-            <section class="row">
-                <div>
-                    <ul id="ingredients-list">
-                        
-                    </ul>
-                </div>
-
+                <section class="ingredients">
+                    <form id="add-ingredient">
+                        <label>
+                            Add Ingredient
+                            <input type="text" id="ingredient-name" name="ingredient-name" />
+                        </label>
+                        <label>
+                            Quantity
+                            <input type="text" id="ingredient-quantity" name="ingredient-quantity" />
+                        </label>
+                        <label>
+                            Measurement
+                            <select id="ingredient-measurement" name="ingredient-measurement">
+                                <option value="cups">Cups</option>
+                                <option value="tablespoons">Tablespoon(s)</option>
+                                <option value="teaspoons">Teaspoon(s)</option>
+                                <option value="grams">Grams</option>
+                                <option value="milliliters">Milliliters</option>
+                            </select>
+                        </label>
+                        <button type="submit">Add Ingredient</button>
+                    </form>
+                </section>
+                <section class="ingredients">
+                    <div>
+                        <ul id="ingredients-list">
+                            
+                        </ul>
+                        <button type="submit" id="remove-ingredient">Remove Ingredient</button>
+                    </div>
+                    
+                </section>
             </section>
         </section>
     </main>

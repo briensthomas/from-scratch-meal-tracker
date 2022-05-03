@@ -1,9 +1,9 @@
 // import functions and grab DOM elements
 import { renderIngredientsList } from './utils.js';
 const ingredientForm = document.getElementById('add-ingredient');
-// const ingredientSubmit = document.getElementById('ingredient-submit');
 
 const ingredientsList = document.getElementById('ingredients-list');
+const removeIngredientButton = document.getElementById('remove-ingredient');
 // let state
 let ingredientsArray = [];
 // set event listeners 
@@ -23,6 +23,7 @@ ingredientForm.addEventListener('submit', (e) => {
     ingredientsArray.push(ingredients);
     console.log('logging ingredients', ingredientsArray);
     displayIngredientsList();
+    ingredientForm.reset();
 });
 
 const displayIngredientsList = () => {
@@ -32,3 +33,9 @@ const displayIngredientsList = () => {
         ingredientsList.append(li);
     }
 };
+
+removeIngredientButton.addEventListener('click', () => {
+    ingredientsArray.pop();
+    console.log(ingredientsArray);
+    displayIngredientsList();
+});
