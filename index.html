@@ -20,47 +20,55 @@
     </header>
     <main>
         <section class="main-section">
-            <img class="main-logo" src="./assets/alchemy-logo.png" />
             <h2>
-                Welcome to Alchemy Bootstrap!
+                Ingredients
             </h2>
+            <section class="row">
+                <section class="ingredients">
+                    <form id="add-ingredient">
+                        <label>
+                            Add Ingredient
+                            <input type="text" id="ingredient-name" name="ingredient-name" />
+                        </label>
+                        <label>
+                            Quantity
+                            <input type="text" id="ingredient-quantity" name="ingredient-quantity" />
+                        </label>
+                        <label>
+                            Measurement
+                            <select id="ingredient-measurement" name="ingredient-measurement">
+                                <option value="cups">Cups</option>
+                                <option value="tablespoons">Tablespoon(s)</option>
+                                <option value="teaspoons">Teaspoon(s)</option>
+                                <option value="grams">Grams</option>
+                                <option value="milliliters">Milliliters</option>
+                            </select>
+                        </label>
+                        <button type="submit">Add Ingredient</button>
+                    </form>
+                </section>
+                <section class="ingredients">
+                    <div>
+                        <ul id="ingredients-list">
+                            
+                        </ul>
+                        <button type="submit" id="remove-ingredient">Remove Ingredient</button>
+                    </div>
+                    
+                </section>
+            </section>
+            <section class="save-meal">
+                <h2>Save Meal</h2>
+                <input type="text" placeholder="Meal Name" id="meal-input">
+                <button type="submit" id="meal-submit">Add Meal</button>
+            </section>    
+            <section class="meals-list">
+                <div>
+                    <ul id="meal-list">
 
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-            <hr />
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-
+                    </ul>
+                </div>
+            </section>
         </section>
     </main>
     <footer>
