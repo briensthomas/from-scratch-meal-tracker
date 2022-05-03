@@ -7,11 +7,20 @@ form {
 .row {
     display: flex;
     flex-direction: row;
+    margin: 0;
+    padding: 0;
 }
 
 .ingredients {
-    width: 100%;
+    width: 500px;
     padding: 10%;
     border: 2px solid black;
     margin: 30px;
 }
+/* 
+.save-meal {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+} */

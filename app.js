@@ -1,11 +1,15 @@
 // import functions and grab DOM elements
-import { renderIngredientsList } from './utils.js';
+import { renderIngredientsList, renderMealsList } from './utils.js';
 const ingredientForm = document.getElementById('add-ingredient');
-
 const ingredientsList = document.getElementById('ingredients-list');
 const removeIngredientButton = document.getElementById('remove-ingredient');
+
+const mealSubmitButton = document.getElementById('meal-submit');
+const mealInput = document.getElementById('meal-input');
+const mealsList = document.getElementById('meal-list');
 // let state
 let ingredientsArray = [];
+let mealsArray = [];
 // set event listeners 
   // get user input
   // use user input to update state 
@@ -36,6 +40,24 @@ const displayIngredientsList = () => {
 
 removeIngredientButton.addEventListener('click', () => {
     ingredientsArray.pop();
-    console.log(ingredientsArray);
     displayIngredientsList();
 });
+
+mealSubmitButton.addEventListener('click', () => {
+    const name = mealInput.value;
+    let totalIngredients = ingredientsArray.length;
+    
+    mealsArray.push({
+        name,
+        totalIngredients,
+    });
+    displayMealsList();
+});
+
+const displayMealsList = () => {
+    mealsList.textContent = '';
+    for (let meal of mealsArray) {
+        const li = renderMealsList(meal);
+        mealsList.append(li);
+    }
+};
